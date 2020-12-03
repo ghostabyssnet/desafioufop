@@ -32,7 +32,7 @@ ALLOWED_HOSTS = ['127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
-    'Virtual.apps.VirtualConfig'
+    'Virtual.apps.VirtualConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
