@@ -4,7 +4,8 @@ from Virtual.system.formhandler import HandleStudentForm
 from .apiconnector import CreatePerson
 # static
 
-# I know it could be 
+# If this project was bigger, I'd split this in multiple files.
+# Organization isn't too relevant right now as I'm running out of time.
 
 def index(request):
     return render(request, 'index.html')
