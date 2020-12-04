@@ -1,0 +1,21 @@
+.ufop-red {
+    color: #9b2743 !important;
+}
+
+.ufop-bg {
+    background-color: rgb(64, 64, 64);
+}
+
+.ufop-nav {
+    background-color: rgb(200, 200, 200, 0.5) !important;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+img.ufop-logo {
+    height: 50% !important;
+    width: 50% !important;
+}

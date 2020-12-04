@@ -53,6 +53,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'UFOP.urls'
 
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale'),
+            os.path.join(BASE_DIR, 'Virtual', 'locale'),
+            ]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
