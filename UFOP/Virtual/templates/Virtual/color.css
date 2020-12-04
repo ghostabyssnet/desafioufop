@@ -36,6 +36,18 @@
     -webkit-text-fill-color: transparent;
 }
 
+.dropdown-menu,
+.dropdown-divider{
+    border-color: black !important;
+    background-color: rgb(235, 235, 235) !important;
+}
+
+.dropdown-item {
+    color: #b10b32 !important;
+    font-weight: bold;
+    font-size: 18px;
+}
+
 .nav-title {
     font-size: 24px;
     font-weight: bold;
