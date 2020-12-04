@@ -5,13 +5,13 @@
     {% block content %}
     <div class="mx-auto ufop-body border w-75">
         <div class="text-center">
-            <h1 style="display: inline;" class="formtitle">Formulário de Alunos</h1>
+            <h1 style="display: inline;" class="formtitle">Formulário de Mobilidade</h1>
             <h4 class="mt-2 subsub">Universidade Federal de Ouro Preto</h3>
         </div>
         <div class="mx-2 mt-5">
             <p>
-                Preencha este formulário se possui interesse em estudar fora da UFOP por um ou dois semestres.
-                <br><a href="#" class="subtitle">(Also available in English: CLICK HERE)</a>
+                Preencha este formulário se possui interesse em estudar na UFOP por um ou dois semestres.
+                <br><a href="/virtual/en/external" class="subtitle">(Also available in English: CLICK HERE)</a>
                 <form method="post">
                     {% csrf_token %}
                     <label for="nome">Nome: </label>
@@ -20,7 +20,7 @@
                     <label for="sobrenome">Sobrenome: </label>
                     <input id="sobrenome" type="text" name="sobrenome">
                     <br>
-                    <label for="telefone">Telefone: </label>
+                    <label for="phonenumber">Telefone: </label>
                     <input id="telefone" type="tel" name="telefone" pattern="[0-9]{2}-[0-9]{4,}-[0-9]{4}">
                     <br>
                     <label for="data_nascimento">Data de Nascimento: </label>
@@ -29,14 +29,11 @@
                     <label for="email">E-mail: </label>
                     <input id="email" type="email" name="email">
                     <br>
-                    <input type="submit" value="OK">
+                    <input type="submit" value="Inserir">
                 </form>
                 <h5 class="devcomment text-center mt-5">- Comentário do desenvolvedor -</h5>
                 <p>
-                    Ok, isso pode soar estranho, mas a maioria do conteúdo dessa página não é... redundante? Se o aluno está registrado na UFOP, então pegamos a matrícula
-                    dele em um query e temos a maioria das informações que ele digita aqui. Isso evitaria possíveis erros de digitação da pessoa, e ainda pouparia tempo
-                    dos dois lados.
-                    Seria simples de implementar... suponho. Um GET na API da UFOP com o número de matrícula, talvez?
+                    A informação desta página não soa redundante, ao contrário de sua irmã gêmea.
                 </p>
             </p>
         </div>
