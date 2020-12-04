@@ -1,3 +1,4 @@
+from django.shortcuts import redirect
 # This file handles all sorts of datababase management.
 # I know it isn't as organized as it could be, more so if we consider bigger projects.
 # However, this isn't one of those, so it should do the trick.
@@ -7,7 +8,7 @@ from .models import Pessoa
 from .tests import debug
 
 # creates a new Pessoa in the database
-def CreatePerson(*payload):
+def CreatePerson(payload):
     person= Pessoa(
         nome= payload[0],
         sobrenome= payload[1],
@@ -16,5 +17,5 @@ def CreatePerson(*payload):
         email= payload[4]
     )
     person.save()
-    debug('Adding a Pessoa named [' + payload[0] + '] to our database.')
-    return True # If succesful, we'll redirect our user or something.
+    debug('Adding a Pessoa named [' + str(payload[0]) + '] to our database.')
+    return redirect('success') # If succesful, we'll redirect our user or something.

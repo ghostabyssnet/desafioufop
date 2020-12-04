@@ -12,13 +12,16 @@ def index(request):
 def alunos(request):
     return render(request, 'alunos.html')
 
+def success(request):
+    return render(request, 'success.html')
+
 def externo(request):
     _nome= request.POST.get('nome')
     _sobrenome= request.POST.get('sobrenome')
     _data_nascimento= request.POST.get('data_nascimento')
     _telefone= request.POST.get('telefone')
     _email= request.POST.get('email')
-    _payload= (_nome + _sobrenome + _data_nascimento + _telefone + _email)
+    _payload= (_nome, _sobrenome, _data_nascimento, _telefone, _email)
     if HandleForm(_payload): # We could use try-catch (except) or any other error handling here.
         CreatePerson(_payload)
     else:

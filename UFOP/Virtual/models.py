@@ -9,11 +9,11 @@ date = datetime.date.today()
 
 # Pessoa: the superset of our classes
 class Pessoa(models.Model):
-    nome= models.CharField(max_length=32)
-    sobrenome= models.CharField(max_length=32)
-    telefone= models.CharField(max_length=16)
-    data_nascimento= models.DateField(auto_now=False, default=date.today)
-    email= models.EmailField(max_length=128)
+    nome= models.CharField(max_length=32, blank=True, null = True)
+    sobrenome= models.CharField(max_length=32, blank=True, null = True)
+    telefone= models.CharField(max_length=16, blank=True, null = True)
+    data_nascimento= models.DateField(auto_now=False, default=date.today, blank=True, null = True)
+    email= models.EmailField(max_length=128, blank=True, null = True)
     # __str__ stops us from being absolutely confused when we call Pessoa as an object
     def __str__(self):
         return self.nome
