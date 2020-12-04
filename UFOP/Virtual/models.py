@@ -56,6 +56,8 @@ class Mobilidade(models.Model):
     )
     pessoa= models.ForeignKey("Virtual.Pessoa", on_delete=models.CASCADE)
     universidade= models.ForeignKey("Virtual.Universidade", on_delete=models.CASCADE)
+    periodo_inicio= models.DateField(auto_now=False, auto_now_add=False)
+    periodo_fim= models.DateField(auto_now=False, auto_now_add=False)
     # (D) did he come from another university, or...
     # (P) did he transfer from UFOP to it?
     de_para= models.CharField(max_length=1, choices=ESCOLHAS)

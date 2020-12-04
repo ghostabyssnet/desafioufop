@@ -7,7 +7,33 @@
 }
 
 .ufop-nav {
-    background-color: rgb(200, 200, 200, 0.5) !important;
+    font-size: 24px;
+    background-color: rgb(250,250,250);
+    border-radius: 20px;
+    border-color: black;
+}
+
+.ufop-body {
+    background-color: rgb(250, 250, 250) !important;
+    border-color: rgb(40, 40, 40) !important;
+}
+
+.nav-link {
+    color: rgb(40, 40, 40, 0.95) !important;
+}
+
+.disabled {
+    color: gray !important;
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: rgb(151, 40, 66,0.5) !important;
+    border-bottom-color: rgb(151, 40, 66) !important;
+    text-shadow: 1px 1px 2px rgb(195, 40, 66);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .nav-title {
@@ -15,7 +41,17 @@
     font-weight: bold;
 }
 
+.vl {
+    border-left: 8px solid rgb(60,60,60);
+    height: 52px;
+}
+
 img.ufop-logo {
     height: 50% !important;
     width: 50% !important;
+}
+
+.devcomment {
+    color: gray;
+    font-style: italic;
 }

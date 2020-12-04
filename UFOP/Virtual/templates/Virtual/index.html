@@ -1,19 +1,26 @@
 {% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
 <html>
-    <head>
-        <!--Meta tags-->
-        <meta charset="utf-8">
-        <!--Title-->
-        <title>Virtual - UFOP</title>
-        <!--Stylesheets-->
-        <link rel="stylesheet" href="{% static 'index.css' %}">
-</head>
 <body>
     {% block content %}
-    <div class="pt-3">
-        <h1 class="text-center">Hello world dos cria</h1>
+    <div class="mx-auto ufop-body border w-75">
+        <div class="text-center">
+            <h1 style="display: inline;" class="formtitle">Introdução ao Módulo</h1>
+            <h4 class="mt-2 subsub">Universidade Federal de Ouro Preto</h3>
+        </div>
+        <div class="mx-2 mt-5">
+            <p>
+                Seja bem-vindo(a)! Utilize os menus para fazer um formulário similar aos atuais do CAINT (Encontrados <a href="#">aqui</a> e <a href="#">aqui</a>).
+                <br>Peço desculpas pelo visual básico daqui, a prioridade foi o backend. Caso tenha interesse, <a href="http://cubesouls.com">meu website demonstra um pouco mais das minhas habilidades em frontend</a>.
+                <br>Neste website, você pode:
+                <li>Criar uma conta, definida tanto como aluno quanto servidor. Visitantes não precisam criar uma conta para fazer formulários;</ul>
+                <li>Fazer formulários de mobilidade (tanto <u>de</u> quanto <u>para</u> algum lugar);</ul>
+                <li>Trocar seu idioma! A implementação é <i>um pouco (sic)</i> feia por dentro, mas funciona. Tive diversos problemas com a library do Django.</ul>
+                <br><br>Todas as páginas possuem <i>comentários do desenvolvedor</i> em seus rodapés, pois sinto que o vídeo foi muito curto para explicar algumas coisas.
+                <br>Como deve ter percebido, esta página é um <i>placeholder</i>. O ideal seria um menu com todas as notícias recentes da UFOP aqui, assim
+                como o CAINT já possui em seu website.
+            </p>
+        </div>
     </div>
     {% endblock %}
 </body>
