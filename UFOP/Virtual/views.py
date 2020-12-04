@@ -1,8 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse,Http404,HttpRequest
-from Virtual.system.formhandler import HandleStudentForm
+from Virtual.system.formhandler import HandleForm
 from .apiconnector import CreatePerson
-# static
 
 # If this project was bigger, I'd split this in multiple files.
 # Organization isn't too relevant right now as I'm running out of time.
@@ -20,7 +19,7 @@ def externo(request):
     _telefone= request.POST.get('telefone')
     _email= request.POST.get('email')
     _payload= (_nome + _sobrenome + _data_nascimento + _telefone + _email)
-    if HandleStudentForm(_payload): # We could use try-catch (except) or any other error handling here.
+    if HandleForm(_payload): # We could use try-catch (except) or any other error handling here.
         CreatePerson(_payload)
     else:
         print('As I\'ve commented, we\'d use error handling in this block.')

@@ -4,6 +4,7 @@
 # Also, let's be honest: Python is terrible at handling files.
 
 from .models import Pessoa
+from .tests import debug
 
 # creates a new Pessoa in the database
 def CreatePerson(*payload):
@@ -15,3 +16,5 @@ def CreatePerson(*payload):
         email= payload[4]
     )
     person.save()
+    debug('Adding a Pessoa named [' + payload[0] + '] to our database.')
+    return True # If succesful, we'll redirect our user or something.
