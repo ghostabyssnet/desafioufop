@@ -11,7 +11,6 @@
         <div class="mx-2 mt-5">
             <p>
                 Preencha este formulário se possui interesse em estudar fora da UFOP por um ou dois semestres.
-                <br><a href="#" class="subtitle">(Also available in English: CLICK HERE)</a>
                 <form method="post">
                     {% csrf_token %}
                     <label for="nome">Nome: </label>
@@ -21,7 +20,7 @@
                     <input id="sobrenome" type="text" name="sobrenome">
                     <br>
                     <label for="telefone">Telefone: </label>
-                    <input id="telefone" type="tel" name="telefone" pattern="[0-9]{2}-[0-9]{4,}-[0-9]{4}">
+                    <input id="telefone" type="tel" name="telefone">
                     <br>
                     <label for="data_nascimento">Data de Nascimento: </label>
                     <input id="data_nascimento" type="date" name="data_nascimento">
